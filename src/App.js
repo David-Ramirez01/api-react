@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useEffect , useState } from "react";
+import Personaje from "./componentes/personajes";
 
 function App() {
+
+  const [personajes, setpersonajes] = useState([]);
+
+  const Initialurl = "https://dragon-ball-super-api.herokuapp.com/api/characters"
+
+  const FetchPersonajes = (url) => {
+    fetch(url)
+    .then(resp => resp.json())
+    .then(data => setpersonajes(data))
+    .catch(console.log(Error))
+  
+  }
+  
+  useEffect (() => {
+    FetchPersonajes(Initialurl);
+  },[])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <div className = "container mt-5 mb-5">
+      <h3 className="text-center"> Api de Dragon ball</h3>
+      < Personaje personajes={personajes} />
     </div>
+    </>
   );
 }
 
