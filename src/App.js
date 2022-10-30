@@ -26,7 +26,7 @@ function App() {
     <div className = "container">
       <nav className="navbar navbar-dark bg-dark">
         <div className="container d-flex d-flex justify-content-start ">
-          <h3 className="ml-5 text-light" col> Api de Dragon ball</h3>
+          <h3 className="ml-5 text-light" col> Api de Naruto</h3>
         </div>
         </nav>
       
