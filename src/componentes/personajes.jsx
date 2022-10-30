@@ -6,14 +6,12 @@ return (
         {
             personajes.map((item,index) =>(
                 <div key={index} className="col mb-4">
-                    <div className="card mt-5" style={{ minWidth: "300px", maxWidth: "600px", minHeight: "300px", maxHeight: "600px", }} >
-                        <img class="rounded mx-auto d-block" src={item.imageUrl} alt={item.name} style={{ minWidth: "200px" , maxWidth: "200px", minHeight: "200px", maxHeight: "200px",}}/>
+                    <div className="card mt-5" style={{ minWidth: "300px", maxWidth: "300px", minHeight: "350px", maxHeight: "350px", }} >
+                        <img class=" container rounded mx-auto d-block" src={item.images[0]} alt={item.name} style={{ minWidth: "200px" , maxWidth: "200px", minHeight: "200px", maxHeight: "200px",}}/>
                         <div className='card-body'>
                             <h5 className='card-title text-center'>{item.name}</h5>
                             <hr />
-                            <p>Planeta: {item.originplanet}</p>
-                            <p>Status: {item.status}</p>
-                            <p>Rol: {item.role}</p>
+                            <p>Afiliacion: {item.info.Afiliação}</p>
                         </div>
                     </div>
                 </div>
