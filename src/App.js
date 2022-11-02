@@ -5,7 +5,7 @@ function App() {
 
   const [personajes, setpersonajes] = useState([]);
 
-  const Initialurl = "https://naruto-api.herokuapp.com/api/v1/characters"
+  const Initialurl = "https://naruto-api.herokuapp.com/api/v1/characters?sort=true"
 
 
   const FetchPersonajes = (url) => {
